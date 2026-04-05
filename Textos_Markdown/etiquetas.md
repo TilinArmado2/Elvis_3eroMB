@@ -5,6 +5,7 @@
 - `<html>`: Raíz del documento.
 - `<head>`: Contiene metadatos, título y enlaces a estilos.
 - `<body>`: Contiene todo el contenido visible de la página. 
+- `<footer>`Es el bloque de abajo de la página (el contenedor).
 
 # Contenido y Estructura
 
@@ -30,6 +31,7 @@
 # Etiquetas relevantes 
 - `<!DOCTYPE html>`: Etiqueta principal, indica que es una pagina de tipo HTML.
 - `<lang>`: El atributo lang en HTML define el idioma natural del contenido de una página
+- `<href>`Es la dirección o el camino que sigue un botón o link.
 
 # Texto
 
