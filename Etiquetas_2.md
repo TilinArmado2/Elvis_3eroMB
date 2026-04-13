@@ -26,7 +26,7 @@
 
 `<button type="submit">`: Botón encargado de procesar y enviar el formulario.
 
-## Resuemn de etiquetas de validacion y control
+## Resumen de etiquetas de validacion y control
 
 `required`: Obliga al usuario a completar el campo antes de enviar.
 
