@@ -41,3 +41,5 @@
 `autocomplete`: Indica al navegador que sugiera datos guardados del usuario.
 
 `inputmode`: Determina qué teclado mostrar en dispositivos móviles (ej. numérico).
+
+`oninput`: Es un atributo de evento en HTML que se activa inmediatamente cada vez que el valor de un elemento `<input>` o `<textarea>` cambia.

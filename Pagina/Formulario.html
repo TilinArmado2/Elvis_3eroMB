@@ -1,0 +1,28 @@
+<head>
+    <h1>Formulario de Contacto</h1>
+</head>
+
+
+<form>
+<label for = telefono > Telefono de contacto</label>
+
+<input
+  type="tel"
+  id="telefono"
+  name="telefono"
+  required
+  inputmode="numeric"
+  autocomplete="tel"
+  maxlength="9"
+  pattern="^0[0-9]{8}$"
+  placeholder="Ingrese su numero de telefono"
+  title="Debe comenzar con 0 y tener 9 digitos"
+  oninput="
+    this.value = this.value.replace(/[^0-9]/g, '');
+    if (this.value.length === 1 && this.value !== '0') {
+      this.value = '';
+    }
+  "
+>
+
+</form>
