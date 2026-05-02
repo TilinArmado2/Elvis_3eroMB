@@ -18,7 +18,17 @@
 
     <div>
         <label>Telefono:</label><br>
-        <input type="tel" name="telefono" placeholder="099123456">
+        <input type="tel" 
+        name="telefono" 
+        placeholder="099123456"
+          id="telefono"
+          required
+          inputmode="numeric"
+          autocomplete="tel"
+          maxlength="9"
+          pattern="^0[0-9]{8}$"
+          title="Debe comenzar con 0 y tener 9 digitos"
+        >
     </div>
 
     <br>
