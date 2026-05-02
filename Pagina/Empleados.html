@@ -4,25 +4,33 @@
         <div>
             <label>Cédula:</label><br>
             <input
-            type="text"
-            placeholder="Ej:1234678"
-            inputmode="numeric"
-            pattern="[0-9]{8}"
-            maxlength="8"
+                type="text"
+                placeholder="Ej:1234678"
+                inputmode="numeric"
+                pattern="^[1-9][0-9]{6,7}$"
+                maxlength="8"
+                title="Debe ser mayor a 1.000.000 y no puede comenzar con 0"
+                required
             >
         </div>
+
         <br>
+
         <div>
             <label>Contraseña</label><br>
-            <input type="password" 
-            placeholder="contraseña"
-            maxlength="26">
+            <input 
+                type="password" 
+                placeholder="contraseña"
+                maxlength="26"
+            >
         </div>
+
         <br>
-        <button type="button">INGRESAR</button>
-        <br>
-        <br>
+
+        <button type="submit">INGRESAR</button>
+
+        <br><br>
         
         <a href="index.html">regresar</a>
     </form>
-</html>  
+</html>
