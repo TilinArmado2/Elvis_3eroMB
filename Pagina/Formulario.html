@@ -1,21 +1,33 @@
+<!DOCTYPE html>
+<html>
 <head>
-    <h1>Formulario de Contacto</h1>
+    <title>Formulario de Contacto</title>
 </head>
 
-<form>
-<label for="telefono">Telefono de contacto</label>
+<body>
 
-<input
-  type="tel"
-  id="telefono"
-  name="telefono"
-  required
-  inputmode="numeric"
-  autocomplete="tel"
-  maxlength="9"
-  pattern="^0[0-9]{8}$"
-  placeholder="Ingrese su numero de telefono"
-  title="Debe comenzar con 0 y tener 9 digitos"
->
-<button type="submit">Enviar</button>
-</form>
+    <h1>Formulario de Contacto</h1>
+
+    <form>
+        <label for="telefono">Teléfono de contacto</label><br>
+
+        <input
+          type="tel"
+          id="telefono"
+          name="telefono"
+          required
+          inputmode="numeric"
+          autocomplete="tel"
+          maxlength="9"
+          pattern="^0[0-9]{8}$"
+          placeholder="Ingrese su numero de telefono"
+          title="Debe comenzar con 0 y tener 9 digitos"
+        >
+
+        <br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+</body>
+</html>
