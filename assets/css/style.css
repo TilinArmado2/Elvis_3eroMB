@@ -4,3 +4,16 @@ nav a {
     padding: 5px 10px;
     text-decoration: none;
 }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+h1, h2, h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--gris-azulado);
+}
+
+p, label, input, textarea, select, button, a {
+    font-size: 16px;
+}
