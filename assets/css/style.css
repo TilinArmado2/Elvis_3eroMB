@@ -6,7 +6,6 @@
     --blanco: #ffffff;
     --negro: #1f1f1f;
 }
-
 body {
     background-color: var(--gris-claro);
     color: var(--negro);
