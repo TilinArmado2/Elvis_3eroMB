@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="../assets/css/style.css">
-<form>
+<form onsubmit="mostrarConfirmacion(); return false;">
     <h1>Contactos a soporte</h1>
     <div>
         <label>Nombre:</label><br>
@@ -53,9 +53,12 @@
     <br>
 
     <div>
-        <label>Descripción</label><br>
-        <textarea name="mensaje" placeholder="Escribe una breve presentación..." rows="5" cols="30" required></textarea>
-    </div>
+    <button type="submit">Enviar Solicitud</button>
+</div>
+
+<div id="mensajeConfirmacion" class="mensaje-confirmacion">
+    La consulta fue enviada correctamente.
+</div>
 
     <br>
 
@@ -69,3 +72,8 @@
     <a href="index.html">Regresar</a>
     </div>
 </form>
+<script>
+    function mostrarConfirmacion() {
+        document.getElementById("mensajeConfirmacion").style.display = "block";
+    }
+</script>
