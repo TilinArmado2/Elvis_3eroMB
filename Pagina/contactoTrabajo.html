@@ -2,6 +2,14 @@
 <link rel="stylesheet" href="../assets/css/style.css">
 <form>
     <h1>Solicitud de empleo</h1>
+
+    <h2>IMPORTANTE</h2>
+    <strong>Los postulantes al formulario deberan:</strong>
+    <p>Ser mayores de edad, tener ciclo básico de estudios aprovado e incluir referencias de ser posible.</p>
+    <p>Todo formulario que no cumpla con los requisitos será descartado sin notificación.</p> 
+    
+    <br>
+
     <div>
         <label>Nombre:</label><br>
         <input type="text" name="nombre" placeholder="Juan" autocomplete="given-name" required>
@@ -13,7 +21,15 @@
         <label>Apellido:</label><br>
         <input type="text" name="apellido" placeholder="Pérez" autocomplete="family-name" required>
     </div>
+
+    <br>
+
+        <label for="nacimiento">Fecha de nacimiento:</label><br>
+        <input type="date" name="nacimiento" id="nacimiento" required>
+        <small>(Se requieren mas de 18 años)</small>
     
+    <br>
+
     <br>
 
     <div>
@@ -81,4 +97,12 @@
             }
         }
     }
+</script>
+<script>
+    const hoy = new Date();
+    const anioMinimo = hoy.getFullYear() - 18;
+    const mes = String(hoy.getMonth() + 1).padStart(2, '0');
+    const dia = String(hoy.getDate()).padStart(2, '0');
+    const fechaLimite = `${anioMinimo}-${mes}-${dia}`;
+    document.getElementById("nacimiento").max = fechaLimite;
 </script>
