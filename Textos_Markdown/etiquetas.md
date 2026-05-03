@@ -15,6 +15,12 @@
 - `<img>`: Inserta imágenes (etiqueta autocerrada).
 - `<div>`: Contenedor genérico para agrupar elementos.
 - `<span>`: Contenedor en línea para texto o elementos pequeños. 
+- `<nav>`: Define una sección de navegación.
+- `<section>`: Define una sección en el documento.
+- `<table>`: Crea una tabla.
+- `<tr>`: Define una fila en una tabla.
+- `<th>`: Define una celda de encabezado en una tabla.
+- `<td>`: Define una celda de datos en una tabla.
 
 # Listas
 
@@ -22,12 +28,28 @@
 - `<ol>`: Lista ordenada (numerada).
 - `<li>`: Elemento dentro de una lista (`<ul>` o `<ol>`). 
 
+# Formularios
+
+- `<form>`: Define un formulario para entrada de usuario.
+- `<label>`: Define una etiqueta para un elemento de entrada.
+- `<input>`: Define un campo de entrada.
+- `<button>`: Define un botón clicable.
+- `<select>`: Define una lista desplegable.
+- `<option>`: Define una opción en una lista desplegable.
+- `<textarea>`: Define un área de texto multilínea.
+
 # Etiquetas de Formato
 
 - `<strong>`: Texto importante (generalmente negrita).
 - `<em>`: Texto enfatizado (generalmente cursiva).
 - `<br>`: Salto de línea.
 - `<hr>`: Línea horizontal temática. 
+- `<small>`: Define texto pequeño.
+
+# Scripts
+
+- `<script>`: Define un script del lado del cliente.
+
 # Etiquetas relevantes 
 - `<!DOCTYPE html>`: Etiqueta principal, indica que es una pagina de tipo HTML.
 - `<lang>`: El atributo lang en HTML define el idioma natural del contenido de una página

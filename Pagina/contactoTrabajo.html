@@ -108,8 +108,12 @@
     <br>
 
     <div>
-        <button type="submit">Enviar Solicitud</button>
-    </div>
+    <button type="submit">Enviar Solicitud</button>
+</div>
+
+<div id="mensajeConfirmacion" class="mensaje-confirmacion">
+    El curriculum fue enviado correctamente.
+</div>
     
 </form>
 
@@ -128,12 +132,12 @@
             }
         }
     }
+     function mostrarConfirmacion() {
+        document.getElementById("mensajeConfirmacion").style.display = "block";
+    }
 </script>
-<script>
-    const hoy = new Date();
-    const anioMinimo = hoy.getFullYear() - 18;
-    const mes = String(hoy.getMonth() + 1).padStart(2, '0');
-    const dia = String(hoy.getDate()).padStart(2, '0');
-    const fechaLimite = `${anioMinimo}-${mes}-${dia}`;
-    document.getElementById("nacimiento").max = fechaLimite;
-</script>
+
+<div>
+    <label>Fecha de nacimiento:</label><br>
+    <input type="date" id="nacimiento" name="nacimiento" max="2007-12-31" required>
+</div>
