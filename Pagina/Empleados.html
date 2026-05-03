@@ -1,5 +1,17 @@
 <!DOCTYPE html>
 
+<title>Todo en Blanco - Login de Empleados</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<nav>
+            <a href="index.html">Inicio</a>
+            <a href="Sobre Nosotros.html">Sobre Nosotros</a>
+            <a href="cobertura.html">Ver Zonas de Envío</a>
+            <a href="Empleados.html">Para Empleados</a>
+            <a href="SeparacionContacto.html">Contactanos!</a>
+        </nav>
+
+
+
 <html>
     <form>
         <div>
@@ -12,6 +24,7 @@
                 maxlength="8"
                 title="Debe ser mayor a 1.000.000 y no puede comenzar con 0"
                 required
+                id="CI"
             >
         </div>
 
@@ -34,11 +47,10 @@
 
         <br>
 
-        <button type="submit">INGRESAR</button>
+        <button type="button" onclick="validarLogin(event)">Ingresar</button>
 
         <br><br>
         
-        <a href="index.html">regresar</a>
     </form>
     <script>
         function mostrarContraseña() {
@@ -49,6 +61,21 @@
                 campo.type = "password";
             }
         }
+    </script>
+    <script>
+        function validarLogin(event) {
+        event.preventDefault();
+        var user = document.getElementById("CI").value;
+        var pass = document.getElementById("clave").value;
+        var usuarioCorrecto = "11111111";
+        var contraseñaCorrecta ="1234";
+        if (user === usuarioCorrecto && pass === contraseñaCorrecta) {
+            alert("Bienvenido, administrador.");
+            window.location.href = "Empleados_administracion.html";
+        }else{
+            alert("Usuario o contraseña incorrectos. Intenta de nuevo.");
+        }
+    }
     </script>
 
 </html>

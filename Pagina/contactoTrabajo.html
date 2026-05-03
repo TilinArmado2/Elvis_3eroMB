@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="../assets/css/style.css">
-<form onsubmit="mostrarConfirmacion(); return false;">
+<title>Todo en Blanco - Formulario de trabajo</title>
+<nav>
+            <a href="index.html">Inicio</a>
+            <a href="Sobre Nosotros.html">Sobre Nosotros</a>
+            <a href="cobertura.html">Ver Zonas de Envío</a>
+            <a href="Empleados.html">Para Empleados</a>
+            <a href="SeparacionContacto.html">Contactanos!</a>
+        </nav>
+<form>
     <h1>Solicitud de empleo</h1>
 
     <h2>IMPORTANTE</h2>
@@ -107,11 +115,6 @@
     El curriculum fue enviado correctamente.
 </div>
     
-    <br>
-
-    <div>
-    <a href="index.html">Regresar</a>
-    </div>
 </form>
 
 <script>
@@ -124,6 +127,8 @@
             if(archivo.size > limite) {
                 alert("El archvio sobrepasa el límite de 2MB.");
                 input.value= "";
+            }else{
+                alert("El archivo se envió con exito");
             }
         }
     }

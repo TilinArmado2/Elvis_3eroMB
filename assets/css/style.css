@@ -1,8 +1,10 @@
 body {
     background-color: #c0c0c0;
     color: black;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    
 }
 
 nav {
@@ -25,7 +27,8 @@ h1, h2, h3 {
 }
 
 p, label, input, textarea, select, button, a {
-    font-size: 16px;
+    font-size: 16px
+    
 }
 nav a:hover {
     background-color: #47606f;
@@ -56,10 +59,14 @@ section, form {
 
 p {
     line-height: 1.5;
+    text-indent: 30px;
 }
 
 h1, h2, h3 {
     text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #eeb906;
 }
 
 div {
@@ -97,12 +104,4 @@ th {
 
 td, th {
     padding: 10px;
-}
-.mensaje-confirmacion {
-    display: none;
-    background-color: #eeb906;
-    color: black;
-    padding: 10px;
-    margin-top: 15px;
-    border: 2px solid #4e5b64;
 }

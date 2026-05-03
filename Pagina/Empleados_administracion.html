@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Todo en Blanco - Administracion</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="Sobre Nosotros.html">Sobre Nosotros</a>
+        <a href="cobertura.html">Ver Zonas de Envío</a>
+        <a href="Empleados.html">Para Empleados</a>
+        <a href="SeparacionContacto.html">Contactanos!</a>
+    </nav>
+    <header>
+        <h1 class="logo">Todo en Blanco</h1>
+    </header>
+    <main>
+        <h2>Gestion de Empleados</h2>
+        <p>Desde aqui puedes administrar el personal del sistema.</p>
+        <section>
+            <h3>Agregar nuevo Empleado</h3>
+            <form id="formEmpleado">
+                <input type="number" id="ciEmpleado" placeholder="Cedula (Ej: 12345678)" min="1000000" required>
+                <input type="text" id="nombreEmpleado" placeholder="Nombre" required>
+                <input type="text" id="apellidoEmpleado" placeholder="Apellido" required>
+                <input type="text" id="cargoEmpleado" placeholder="Cargo" required>
+                <button type="button" onclick="agregarEmpleado()">Agregar</button>
+            </form>
+        </section>
+        <section>
+            <table id="tablaEmpleados">
+                <thead>
+                    <tr>
+                        <th>Cédula</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Cargo</th>
+                        <th>acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2789342</td>
+                        <td>Augusto</td>
+                        <td>Cuello</td>
+                        <td>Logística</td>
+                        <td>
+                            <button class="button" onclick="prepararModificacion(this)">Modificar</button>
+                            <button class="button" onclick="eliminarFila(this)">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4567123</td>
+                        <td>Leandro</td>
+                        <td>López</td>
+                        <td>Administracion</td>
+                        <td>
+                            <button class="button" onclick="prepararModificacion(this)">Modificar</button>
+                            <button class="button" onclick="eliminarFila(this)">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script>
+      let filaAEditar = null;
+
+function prepararModificacion(boton) {
+    filaAEditar = boton.closest("tr");
+    const celdas = filaAEditar.getElementsByTagName("td");
+    
+    document.getElementById("ciEmpleado").value = celdas[0].innerText;
+    document.getElementById("nombreEmpleado").value = celdas[1].innerText;
+    document.getElementById("apellidoEmpleado").value = celdas[2].innerText;
+    document.getElementById("cargoEmpleado").value = celdas[3].innerText;
+    
+    document.querySelector("#formEmpleado button").innerText = "Guardar Cambios";
+}
+
+function agregarEmpleado() {
+    const ci = document.getElementById("ciEmpleado").value;
+    const nombre = document.getElementById("nombreEmpleado").value;
+    const apellido = document.getElementById("apellidoEmpleado").value;
+    const cargo = document.getElementById("cargoEmpleado").value;
+
+    if (ci < 1000000) {
+        alert("La cédula debe ser mayor a 1.000.000");
+        return;
+    }
+
+    if (ci && nombre && apellido && cargo) {
+        if (filaAEditar) {
+            filaAEditar.cells[0].innerText = ci;
+            filaAEditar.cells[1].innerText = nombre;
+            filaAEditar.cells[2].innerText = apellido;
+            filaAEditar.cells[3].innerText = cargo;
+            
+            filaAEditar = null; 
+            document.querySelector("#formEmpleado button").innerText = "Agregar";
+        } else {
+            const tabla = document.getElementById("tablaEmpleados").querySelector("tbody");
+            const nuevaFila = tabla.insertRow();
+            nuevaFila.innerHTML = `
+                <td>${ci}</td>
+                <td>${nombre}</td>
+                <td>${apellido}</td>
+                <td>${cargo}</td>
+                <td>
+                    <button class="btn-modificar" onclick="prepararModificacion(this)">Modificar</button>
+                    <button class="btn-borrar" onclick="eliminarFila(this)">Eliminar</button>
+                </td>`;
+        }
+
+        document.getElementById("ciEmpleado").value = "";
+        document.getElementById("nombreEmpleado").value = "";
+        document.getElementById("apellidoEmpleado").value = "";
+        document.getElementById("cargoEmpleado").value = "";
+
+    } else {
+        alert("Por favor, completa todos los campos.");
+    }
+}
+
+function eliminarFila(boton) {
+    const fila = boton.closest("tr");
+    if (confirm("¿Estás seguro de que deseas eliminar a este empleado?")) {
+        fila.remove();
+    }
+}
+    </script>
+</body>
