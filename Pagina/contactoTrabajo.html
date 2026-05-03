@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="../assets/css/style.css">
+<title>Todo en Blanco - Formulario de trabajo</title>
 <nav>
             <a href="index.html">Inicio</a>
             <a href="Sobre Nosotros.html">Sobre Nosotros</a>
@@ -122,6 +123,8 @@
             if(archivo.size > limite) {
                 alert("El archvio sobrepasa el límite de 2MB.");
                 input.value= "";
+            }else{
+                alert("El archivo se envió con exito");
             }
         }
     }
