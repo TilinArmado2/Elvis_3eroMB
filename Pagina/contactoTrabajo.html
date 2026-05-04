@@ -17,18 +17,13 @@
     <p>Todo formulario que no cumpla con los requisitos será descartado sin notificación.</p> 
     
     <br>
-
-    <div>
         <label>Nombre:</label><br>
         <input type="text" name="nombre" placeholder="Juan" autocomplete="given-name" required>
-    </div>
 
     <br>
 
-    <div>
         <label>Apellido:</label><br>
         <input type="text" name="apellido" placeholder="Pérez" autocomplete="family-name" required>
-    </div>
 
     <br>
 
@@ -39,8 +34,6 @@
     <br>
 
     <br>
-
-    <div>
         <label>Telefono:</label><br>
         <input type="tel" 
         name="telefono" 
@@ -53,19 +46,13 @@
           pattern="^0[0-9]{8}$"
           title="Debe comenzar con 0 y tener 9 digitos"
          >
-    </div>
 
     <br>
-
-    <div>
     <label>Correo Electronico:</label><br>
     <input type="email" name="correo" placeholder="example@gmail.com" autocomplete="email" required>
-</div>
 
 
 <br>
-
-<div>
     <label>Nivel de estudios:</label><br>
     <select name="estudios" required>
         <option value="">-- Seleccione una opcion --</option>
@@ -74,33 +61,24 @@
         <option value="bachillerato">Bachillerato</option>
         <option value="terciario">Terciario</option>
     </select>
-</div>
 
 <br>
 
-<div>
     <label>Referencias laborales:</label><br>
     <textarea name="referencias" placeholder="Escriba referencias si tiene..." rows="4" cols="30"></textarea>
-</div>
 
 <br>
-
-    <div>
         <label>Descripción</label><br>
         <textarea name="mensaje" placeholder="Escribe una breve presentación..." rows="5" cols="30" required></textarea>
-    </div>
 
     <br>
 
-    <div>
         <label>Adjuntar archivo:</label><br>
         <input type="file" name="cv" accept=".pdf" id="CV" onchange="validarTamaño()" required>
-    </div>
    
     <br>
 
-    <div>
     <button type="submit">Enviar Solicitud</button>
-</div>
+
     
 </form>
