@@ -69,10 +69,6 @@ h1, h2, h3 {
     color: #eeb906;
 }
 
-div {
-    margin-bottom: 10px;
-}
-
 input, textarea, select {
     padding: 6px;
 }
@@ -104,4 +100,10 @@ th {
 
 td, th {
     padding: 10px;
+}
+.productos {
+    display: inline-block;
+}
+.texto {
+    display: inline-block;
 }
