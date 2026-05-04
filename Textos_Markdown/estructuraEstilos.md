@@ -60,4 +60,4 @@
 - `td, th`: Agrega espacio de relleno a las celdas de tabla.
 
 ### text_shadow
-- `text_shadow`: Permite 
+- `text_shadow`: Permite editar la sombra del texto.
