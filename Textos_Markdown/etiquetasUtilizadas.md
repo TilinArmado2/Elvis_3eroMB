@@ -15,7 +15,6 @@ Las siguientes etiquetas HTML han sido utilizadas en los archivos del proyecto:
 - `<h3>`
 - `<p>`
 - `<br>`
-- `<div>`
 - `<strong>`
 - `<img>`
 - `<form>`
