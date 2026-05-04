@@ -104,29 +104,3 @@
 </div>
     
 </form>
-
-<script>
-    function validarTamaño() {
-        var input = document.getElementById("CV");
-        var archivo = input.files[0];
-        var limite = 2097152;
-
-        if (archivo){
-            if(archivo.size > limite) {
-                alert("El archvio sobrepasa el límite de 2MB.");
-                input.value= "";
-            }else{
-                alert("El archivo se envió con exito");
-            }
-        }
-    }
-    const hoy = new Date();
-  const anioMinimo = hoy.getFullYear() - 18;
-  const mes = String(hoy.getMonth() + 1).padStart(2, '0');
-  const dia = String(hoy.getDate()).padStart(2, '0');
-  const fechaLimite = `${anioMinimo}-${mes}-${dia}`;
-
-  document.getElementById("nacimiento").max = fechaLimite;
- 
-    
-</script>

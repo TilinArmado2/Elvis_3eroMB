@@ -14,7 +14,6 @@
 
 <html>
     <form>
-        <div>
             <label>Cédula:</label><br>
             <input
                 type="text"
@@ -26,11 +25,10 @@
                 required
                 id="CI"
             >
-        </div>
 
         <br>
 
-        <div>
+    
             <label for="contraseñas">Contraseña</label><br>
             <input 
                 type="password" 
@@ -39,11 +37,11 @@
                 id="clave"
                 required
             >
-        </div>
-        <div>
+        
+
         <input type="checkbox" onclick="mostrarContraseña()">
         <span>Mostrar Contraseña</span>
-        </div>
+
 
         <br>
 
@@ -52,30 +50,6 @@
         <br><br>
         
     </form>
-    <script>
-        function mostrarContraseña() {
-            var campo =document.getElementById("clave");
-            if (campo.type === "password") {
-                campo.type = "text";
-            }else{
-                campo.type = "password";
-            }
-        }
-    </script>
-    <script>
-        function validarLogin(event) {
-        event.preventDefault();
-        var user = document.getElementById("CI").value;
-        var pass = document.getElementById("clave").value;
-        var usuarioCorrecto = "11111111";
-        var contraseñaCorrecta ="1234";
-        if (user === usuarioCorrecto && pass === contraseñaCorrecta) {
-            alert("Bienvenido, administrador.");
-            window.location.href = "Empleados_administracion.html";
-        }else{
-            alert("Usuario o contraseña incorrectos. Intenta de nuevo.");
-        }
-    }
-    </script>
+  
 
 </html>

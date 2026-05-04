@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<!--Empleados-->
+
+  <script>
+        function mostrarContraseña() {
+            var campo =document.getElementById("clave");
+            if (campo.type === "password") {
+                campo.type = "text";
+            }else{
+                campo.type = "password";
+            }
+        }
+    
+
+        function validarLogin(event) {
+        event.preventDefault();
+        var user = document.getElementById("CI").value;
+        var pass = document.getElementById("clave").value;
+        var usuarioCorrecto = "11111111";
+        var contraseñaCorrecta ="1234";
+        if (user === usuarioCorrecto && pass === contraseñaCorrecta) {
+            alert("Bienvenido, administrador.");
+            window.location.href = "Empleados_administracion.html";
+        }else{
+            alert("Usuario o contraseña incorrectos. Intenta de nuevo.");
+        }
+    }
+    </script>
+
+    <!--Empleados_Administración:-->
+
+<script>
+    let filaAEditar = null;
+
+function prepararModificacion(boton) {
+    filaAEditar = boton.closest("tr");
+    const celdas = filaAEditar.getElementsByTagName("td");
+    
+    document.getElementById("ciEmpleado").value = celdas[0].innerText;
+    document.getElementById("nombreEmpleado").value = celdas[1].innerText;
+    document.getElementById("apellidoEmpleado").value = celdas[2].innerText;
+    document.getElementById("cargoEmpleado").value = celdas[3].innerText;
+    
+    document.querySelector("#formEmpleado button").innerText = "Guardar Cambios";
+}
+
+function agregarEmpleado() {
+    const ci = document.getElementById("ciEmpleado").value;
+    const nombre = document.getElementById("nombreEmpleado").value;
+    const apellido = document.getElementById("apellidoEmpleado").value;
+    const cargo = document.getElementById("cargoEmpleado").value;
+
+    if (ci < 1000000) {
+        alert("La cédula debe ser mayor a 1.000.000");
+        return;
+    }
+
+    if (ci && nombre && apellido && cargo) {
+        if (filaAEditar) {
+            filaAEditar.cells[0].innerText = ci;
+            filaAEditar.cells[1].innerText = nombre;
+            filaAEditar.cells[2].innerText = apellido;
+            filaAEditar.cells[3].innerText = cargo;
+            
+            filaAEditar = null; 
+            document.querySelector("#formEmpleado button").innerText = "Agregar";
+        } else {
+            const tabla = document.getElementById("tablaEmpleados").querySelector("tbody");
+            const nuevaFila = tabla.insertRow();
+            nuevaFila.innerHTML = `
+                <td>${ci}</td>
+                <td>${nombre}</td>
+                <td>${apellido}</td>
+                <td>${cargo}</td>
+                <td>
+                    <button class="btn-modificar" onclick="prepararModificacion(this)">Modificar</button>
+                    <button class="btn-borrar" onclick="eliminarFila(this)">Eliminar</button>
+                </td>`;
+        }
+
+        document.getElementById("ciEmpleado").value = "";
+        document.getElementById("nombreEmpleado").value = "";
+        document.getElementById("apellidoEmpleado").value = "";
+        document.getElementById("cargoEmpleado").value = "";
+
+    } else {
+        alert("Por favor, completa todos los campos.");
+    }
+}
+
+function eliminarFila(boton) {
+    const fila = boton.closest("tr");
+    if (confirm("¿Estás seguro de que deseas eliminar a este empleado?")) {
+        fila.remove();
+    }
+}
+    </script>
+
+    <!--ContactoTrabajo:-->
+
+    <script>
+    function validarTamaño() {
+        var input = document.getElementById("CV");
+        var archivo = input.files[0];
+        var limite = 2097152;
+
+        if (archivo){
+            if(archivo.size > limite) {
+                alert("El archvio sobrepasa el límite de 2MB.");
+                input.value= "";
+            }else{
+                alert("El archivo se envió con exito");
+            }
+        }
+    }
+    const hoy = new Date();
+  const anioMinimo = hoy.getFullYear() - 18;
+  const mes = String(hoy.getMonth() + 1).padStart(2, '0');
+  const dia = String(hoy.getDate()).padStart(2, '0');
+  const fechaLimite = `${anioMinimo}-${mes}-${dia}`;
+
+  document.getElementById("nacimiento").max = fechaLimite;
+ 
+    
+</script>
+
+<!---->
