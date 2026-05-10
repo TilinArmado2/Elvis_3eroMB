@@ -89,18 +89,6 @@ section {
     display: inline-block;
 }
 
-table {
-    background-color: white;
-}
-
-th {
-    background-color: #4e5b64;
-    color: white;
-}
-
-td, th {
-    padding: 10px;
-}
 .imagenes {
     display: inline-block;
 }
