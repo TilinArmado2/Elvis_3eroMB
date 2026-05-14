@@ -52,7 +52,7 @@
 
     <div>
         <label>Adjuntar archivo:</label><br>
-        <input type="file" name="cv" accept=".pdf" required>
+        <input type="file" name="cv" accept=".pdf" id="CV" onchange="validarTamaño()" required>
     </div>
    
     <br>
@@ -67,3 +67,18 @@
     <a href="index.html">Regresar</a>
     </div>
 </form>
+
+<script>
+    function validarTamaño() {
+        var input = document.getElementById("CV");
+        var archivo = input.files[0];
+        var limite = 2097152;
+
+        if (archivo){
+            if(archivo.size > limite) {
+                alert("El archvio sobrepasa el límite de 2MB.");
+                input.value= "";
+            }
+        }
+    }
+</script>
