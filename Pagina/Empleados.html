@@ -17,12 +17,18 @@
         <br>
 
         <div>
-            <label>Contraseña</label><br>
+            <label for="contraseñas">Contraseña</label><br>
             <input 
                 type="password" 
                 placeholder="contraseña"
                 maxlength="26"
+                id="clave"
+                required
             >
+        </div>
+        <div>
+        <input type="checkbox" onclick="mostrarContraseña()">
+        <span>Mostrar Contraseña</span>
         </div>
 
         <br>
@@ -33,4 +39,15 @@
         
         <a href="index.html">regresar</a>
     </form>
+    <script>
+        function mostrarContraseña() {
+            var campo =document.getElementById("clave");
+            if (campo.type === "password") {
+                campo.type = "text";
+            }else{
+                campo.type = "password";
+            }
+        }
+    </script>
+
 </html>
