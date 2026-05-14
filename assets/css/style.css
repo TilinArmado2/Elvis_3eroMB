@@ -25,7 +25,8 @@ h1, h2, h3 {
 }
 
 p, label, input, textarea, select, button, a {
-    font-size: 16px;
+    font-size: 16px
+    
 }
 nav a:hover {
     background-color: #47606f;
@@ -56,6 +57,7 @@ section, form {
 
 p {
     line-height: 1.5;
+    text-indent: 30px;
 }
 
 h1, h2, h3 {
