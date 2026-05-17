@@ -144,3 +144,123 @@
 - `space-between`: Deja espacio entre las líneas.
 - `space-around`: Deja espacio alrededor de las líneas.
 - `stretch`: Estira las líneas para ocupar el espacio disponible.
+
+
+# Box Model
+
+
+- `padding`: Espacio interno entre el contenido y el borde del elemento.
+
+- `padding-top`: Espacio interno superior.
+- `padding-right`: Espacio interno derecho.
+- `padding-bottom`: Espacio interno inferior.
+- `padding-left`: Espacio interno izquierdo.
+
+- Se puede usar:
+- `padding: 10px;`
+- `padding: 10px 20px;`
+- `padding: 10px 20px 15px 5px;`
+
+- `border`: Define el borde del elemento.
+
+- Ejemplo:
+- `border: 2px solid black;`
+
+- Se puede usar:
+- `solid`
+- `dashed`
+- `dotted`
+- `double`
+- `none`
+
+
+- `margin`: Espacio externo entre un elemento y otros elementos.
+
+- `margin-top`: Margen superior.
+- `margin-right`: Margen derecho.
+- `margin-bottom`: Margen inferior.
+- `margin-left`: Margen izquierdo.
+
+- Se puede usar:
+- `margin: 10px;`
+- `margin: auto;`
+- `margin: 10px 20px;`
+
+- `auto`: Para centrar elementos de forma horizontal.
+
+- `box-sizing`: Define cómo se calcula el ancho y alto del elemento.
+
+- `content-box`: El tamaño solo incluye el contenido.
+- `border-box`: El tamaño incluye contenido, padding y borde.
+
+- Ejemplo:
+- `box-sizing: border-box;`
+
+
+# Unidades Absolutas y Relativas
+
+
+## Unidades Absolutas
+
+- `px` (pixels):
+- Unidad fija y exacta.
+- Para bordes, tamaños pequeños y diseños precisos.
+
+- `cm`:
+- Centímetros.
+- Conveniente para impresión.
+
+- `mm`:
+- Milímetros.
+- Útil para impresión detallada.
+
+- `in`:
+- Pulgadas.
+- Usado principalmente en impresión.
+
+- `pt`:
+- Puntos tipográficos.
+- Para documentos e impresión.
+
+
+## Unidades Relativas
+
+- `%`:
+- Se basa en el tamaño del elemento.
+- Conveniente para diseños responsive.
+
+- `em`:
+- Relativo al tamaño de fuente del elemento.
+- Para escalado flexible.
+
+- `rem`:
+- Relativo al tamaño de fuente.
+- Para tipografías consistentes.
+
+- `vw`:
+- Relativo al ancho de la ventana.
+- Útil para diseños adaptables al ancho de pantalla.
+
+- `vh`:
+- Relativo al alto de la ventana.
+- Para secciones fullscreen.
+
+- `vmin`:
+- Usa el valor más pequeño entre ancho y alto de pantalla.
+- Para elementos adaptables.
+
+- `vmax`:
+- Usa el valor más grande entre ancho y alto de pantalla.
+- Útil para escalados grandes.
+
+- `fr`:
+- Unidad usada en CSS Grid.
+- Divide el espacio disponible en fracciones.
+
+- `ch`:
+- Basado en el ancho del carácter `0`.
+- Conveniente para controlar ancho de texto.
+
+- `auto`:
+- El navegador calcula automáticamente el tamaño o espacio.
+- Para márgenes y grids.
