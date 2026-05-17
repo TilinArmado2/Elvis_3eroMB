@@ -89,11 +89,52 @@ section {
     display: inline-block;
 }
 
-.imagenes {
-    display: inline-block;
-}
 .texto {
     display: inline-block;
+    width: 80%;
+    padding: 20px;
+    border: 2px solid #4e5b64;
+    margin: 20px auto;
+    box-sizing: content-box;
+}
+
+.imagenes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 90%;
+    padding: 20px;
+    border: 2px solid #4e5b64;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+
+.testimonios {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header h1,
+.logo {
+    margin-right: 20px;
+}
+
+.imagenes strong,
+.imagenes img {
+    margin: 10px;
+    
 }
 footer {
     background-color: #4e5b64;

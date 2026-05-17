@@ -64,3 +64,31 @@ h1, h2, h3 {
 input, textarea, select {
     padding: 6px;
 }
+
+html, body {
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 40vw;
+    min-height: 45vh;
+    margin: auto;
+    padding: 2em;
+    box-sizing: border-box;
+}
+
+p, label, input, textarea, select, button, a {
+    font-size: 1rem;
+}
+
+input {
+    width: 90%;
+    box-sizing: border-box;
+}
