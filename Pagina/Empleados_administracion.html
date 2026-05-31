@@ -1,72 +1,110 @@
 <!DOCTYPE html>
+<html>
 
 <head>
-    <title>Todo en Blanco - Administracion</title>
-    <link rel="stylesheet" href="../assets/css/Basicos.css">
-    <link rel="stylesheet" href="../assets/css/global.css">
+<title>Todo en Blanco - Administracion</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/formularios.css">
+
+<link rel="stylesheet" href="../assets/css/Basicos.css">
+<link rel="stylesheet" href="../assets/css/global.css">
+<link rel="stylesheet" href="../assets/css/formularios.css">
 </head>
 
 <body>
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="Sobre Nosotros.html">Sobre Nosotros</a>
-        <a href="cobertura.html">Ver Zonas de Envío</a>
-        <a href="Empleados.html">Para Empleados</a>
-        <a href="SeparacionContacto.html">Contactanos!</a>
-    </nav>
-    <header>
-        <h1 class="logo">Todo en Blanco</h1>
-        <br>
-    </header>
-    <main>
-        <h2>Gestion de Empleados</h2>
-        <p>Desde aqui puedes administrar el personal del sistema.</p>
-        <section>
-            <h3>Agregar nuevo Empleado</h3>
-            <form id="formEmpleado">
-                <input type="number" id="ciEmpleado" placeholder="Cedula (Ej: 12345678)" min="1000000" required>
-                <input type="text" id="nombreEmpleado" placeholder="Nombre" required>
-                <input type="text" id="apellidoEmpleado" placeholder="Apellido" required>
-                <input type="text" id="cargoEmpleado" placeholder="Cargo" required>
-                <button type="button" onclick="agregarEmpleado()">Agregar</button>
-            </form>
-        </section>
-        <section>
-            <table id="tablaEmpleados">
-                <thead>
-                    <tr>
-                        <th>Cédula</th>
-                        <th>Nombre</th>
-                        <th>Apellido</th>
-                        <th>Cargo</th>
-                        <th>acciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>2789342</td>
-                        <td>Augusto</td>
-                        <td>Cuello</td>
-                        <td>Logística</td>
-                        <td>
-                            <button class="button" onclick="prepararModificacion(this)">Modificar</button>
-                            <button class="button" onclick="eliminarFila(this)">Eliminar</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>4567123</td>
-                        <td>Julián</td>
-                        <td>González</td>
-                        <td>Administracion</td>
-                        <td>
-                            <button class="button" onclick="prepararModificacion(this)">Modificar</button>
-                            <button class="button" onclick="eliminarFila(this)">Eliminar</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    </main>    
+
+<header class="panelSuperior">
+
+<input type="checkbox" id="menuToggle">
+
+<label for="menuToggle" class="btnMenu">☰</label>
+
+<nav class="menuNavegacion">
+<a href="index.html">Inicio</a>
+<a href="Sobre Nosotros.html">Sobre Nosotros</a>
+<a href="cobertura.html">Ver Zonas de Envío</a>
+<a href="Empleados.html">Para Empleados</a>
+
+<a href="SeparacionContacto.html">Contactanos!</a>
+</nav>
+
+</header>
+
+<header>
+<h1 id="inicio" class="logo">Todo en Blanco</h1>
+<br>
+</header>
+
+<main>
+
+<h2>Gestion de Empleados</h2>
+
+<p>Desde aqui puedes administrar el personal del sistema.</p>
+
+<section>
+<h3>Agregar nuevo Empleado</h3>
+
+<form id="formEmpleado">
+<input type="number" id="ciEmpleado" placeholder="Cedula (Ej: 12345678)" min="1000000" required>
+
+<input type="text" id="nombreEmpleado" placeholder="Nombre" required>
+
+<input type="text" id="apellidoEmpleado" placeholder="Apellido" required>
+
+<input type="text" id="cargoEmpleado" placeholder="Cargo" required>
+
+<button type="button" onclick="agregarEmpleado()">Agregar</button>
+</form>
+</section>
+
+<section>
+
+<table id="tablaEmpleados">
+
+<thead>
+<tr>
+<th>Cédula</th>
+<th>Nombre</th>
+<th>Apellido</th>
+<th>Cargo</th>
+<th>acciones</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>2789342</td>
+<td>Augusto</td>
+<td>Cuello</td>
+<td>Logística</td>
+<td>
+<button class="button" onclick="prepararModificacion(this)">Modificar</button>
+<button class="button" onclick="eliminarFila(this)">Eliminar</button>
+</td>
+</tr>
+
+<tr>
+<td>4567123</td>
+<td>Julián</td>
+<td>González</td>
+<td>Administracion</td>
+<td>
+<button class="button" onclick="prepararModificacion(this)">Modificar</button>
+<button class="button" onclick="eliminarFila(this)">Eliminar</button>
+</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+</main>
+
+<a href="#inicio" class="flechaArriba">↑</a>
+
 </body>
+
+</html>
