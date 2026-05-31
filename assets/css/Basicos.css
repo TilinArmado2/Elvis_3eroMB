@@ -142,3 +142,38 @@ footer {
     text-align: center;
     color: #c0c0c0;
     }
+#menuToggle {
+    display: none;
+}
+
+.btnMenu {
+    display: inline-block;
+    background-color: #eeb906;
+    color: black;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    margin: 10px;
+}
+
+.panelSuperior {
+    background-color: #4e5b64;
+    padding: 10px;
+}
+
+.menuNavegacion {
+    display: none;
+}
+
+#menuToggle:checked ~ .menuNavegacion {
+    display: flex;
+    flex-direction: column;
+}
+
+.menuNavegacion a {
+    background-color: #eeb906;
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px;
+}

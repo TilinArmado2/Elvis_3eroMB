@@ -1,85 +1,118 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="../assets/css/formularios.css">
-<link rel="stylesheet" href="../assets/css/global.css">
-<title>Todo en Blanco - Formulario de trabajo</title>
-<nav>
+<html>
+
+<head>
+    <title>Todo en Blanco - Formulario de trabajo</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../assets/css/formularios.css">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/Basicos.css">
+</head>
+
+<body>
+
+    <header class="panelSuperior">
+
+        <input type="checkbox" id="menuToggle">
+
+        <label for="menuToggle" class="btnMenu">☰</label>
+
+        <nav class="menuNavegacion">
             <a href="index.html">Inicio</a>
             <a href="Sobre Nosotros.html">Sobre Nosotros</a>
             <a href="cobertura.html">Ver Zonas de Envío</a>
             <a href="Empleados.html">Para Empleados</a>
             <a href="SeparacionContacto.html">Contactanos!</a>
         </nav>
-<form>
-    <h1>Solicitud de empleo</h1>
 
-    <h2>IMPORTANTE</h2>
-    <strong>Los postulantes al formulario deberan:</strong>
-    <p>Ser mayores de edad, tener ciclo básico de estudios aprovado e incluir referencias de ser posible.</p>
-    <p>Todo formulario que no cumpla con los requisitos será descartado sin notificación.</p> 
-    
-    <br>
+    </header>
+
+    <form>
+
+        <h1>Solicitud de empleo</h1>
+
+        <h2>IMPORTANTE</h2>
+
+        <strong>Los postulantes al formulario deberan:</strong>
+
+        <p>Ser mayores de edad, tener ciclo básico de estudios aprovado e incluir referencias de ser posible.</p>
+
+        <p>Todo formulario que no cumpla con los requisitos será descartado sin notificación.</p>
+
+        <br>
+
         <label>Nombre:</label><br>
         <input type="text" name="nombre" placeholder="Juan" autocomplete="given-name" required>
 
-    <br>
+        <br>
 
         <label>Apellido:</label><br>
         <input type="text" name="apellido" placeholder="Pérez" autocomplete="family-name" required>
 
-    <br>
+        <br>
 
         <label for="nacimiento">Fecha de nacimiento:</label><br>
         <input type="date" name="nacimiento" id="nacimiento" required>
+
         <small>(Se requieren mas de 18 años)</small>
-    
-    <br>
 
-    <br>
+        <br><br>
+
         <label>Telefono:</label><br>
-        <input type="tel" 
-        name="telefono" 
-        placeholder="099123456"
-          id="telefono"
-          required
-          inputmode="numeric"
-          autocomplete="tel"
-          maxlength="9"
-          pattern="^0[0-9]{8}$"
-          title="Debe comenzar con 0 y tener 9 digitos"
-         >
+        <input type="tel"
+            name="telefono"
+            placeholder="099123456"
+            id="telefono"
+            required
+            inputmode="numeric"
+            autocomplete="tel"
+            maxlength="9"
+            pattern="^0[0-9]{8}$"
+            title="Debe comenzar con 0 y tener 9 digitos">
 
-    <br>
-    <label>Correo Electronico:</label><br>
-    <input type="email" name="correo" placeholder="example@gmail.com" autocomplete="email" required>
+        <br>
 
+        <label>Correo Electronico:</label><br>
+        <input type="email" name="correo" placeholder="example@gmail.com" autocomplete="email" required>
 
-<br>
-    <label>Nivel de estudios:</label><br>
-    <select name="estudios" required>
-        <option value="">-- Seleccione una opcion --</option>
-        <option value="primaria">Primaria</option>
-        <option value="ciclo-basico">Ciclo básico</option>
-        <option value="bachillerato">Bachillerato</option>
-        <option value="terciario">Terciario</option>
-    </select>
+        <br>
 
-<br>
+        <label>Nivel de estudios:</label><br>
 
-    <label>Referencias laborales:</label><br>
-    <textarea name="referencias" placeholder="Escriba referencias si tiene..." rows="4" cols="30"></textarea>
+        <select name="estudios" required>
+            <option value="">-- Seleccione una opcion --</option>
+            <option value="primaria">Primaria</option>
+            <option value="ciclo-basico">Ciclo básico</option>
+            <option value="bachillerato">Bachillerato</option>
+            <option value="terciario">Terciario</option>
+        </select>
 
-<br>
+        <br>
+
+        <label>Referencias laborales:</label><br>
+
+        <textarea name="referencias" placeholder="Escriba referencias si tiene..." rows="4" cols="30"></textarea>
+
+        <br>
+
         <label>Descripción</label><br>
+
         <textarea name="mensaje" placeholder="Escribe una breve presentación..." rows="5" cols="30" required></textarea>
 
-    <br>
+        <br>
 
         <label>Adjuntar archivo:</label><br>
+
         <input type="file" name="cv" accept=".pdf" id="CV" onchange="validarTamaño()" required>
-   
-    <br>
 
-    <button type="submit">Enviar Solicitud</button>
+        <br><br>
 
-    
-</form>
+        <button type="submit">Enviar Solicitud</button>
+
+    </form>
+
+</body>
+
+</html>
