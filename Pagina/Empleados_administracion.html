@@ -24,7 +24,6 @@
 <a href="Sobre Nosotros.html">Sobre Nosotros</a>
 <a href="cobertura.html">Ver Zonas de Envío</a>
 <a href="Empleados.html">Para Empleados</a>
-
 <a href="SeparacionContacto.html">Contactanos!</a>
 </nav>
 
@@ -44,6 +43,10 @@
 <section>
 <h3>Agregar nuevo Empleado</h3>
 
+<button type="button" id="btnAltaUsuario">Alta Usuario</button>
+
+<section class="formularioAltaUsuario">
+
 <form id="formEmpleado">
 <input type="number" id="ciEmpleado" placeholder="Cedula (Ej: 12345678)" min="1000000" required>
 
@@ -54,7 +57,11 @@
 <input type="text" id="cargoEmpleado" placeholder="Cargo" required>
 
 <button type="button" onclick="agregarEmpleado()">Agregar</button>
+
+<button type="button" id="btnCerrarAltaUsuario">Cerrar</button>
 </form>
+
+</section>
 </section>
 
 <section>
@@ -104,6 +111,16 @@
 </main>
 
 <a href="#inicio" class="flechaArriba">↑</a>
+
+<script>
+document.getElementById("btnAltaUsuario").addEventListener("click", function () {
+    document.querySelector(".formularioAltaUsuario").style.display = "flex";
+});
+
+document.getElementById("btnCerrarAltaUsuario").addEventListener("click", function () {
+    document.querySelector(".formularioAltaUsuario").style.display = "none";
+});
+</script>
 
 </body>
 
