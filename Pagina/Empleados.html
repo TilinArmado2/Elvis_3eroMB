@@ -2,73 +2,74 @@
 <html>
 
 <head>
-    <title>Todo en Blanco - Login de Empleados</title>
+<title>Todo en Blanco - Login de Empleados</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../assets/css/login.css">
-    <link rel="stylesheet" href="../assets/css/global.css">
-    <link rel="stylesheet" href="../assets/css/Basicos.css">
+<link rel="stylesheet" href="../assets/css/login.css">
+<link rel="stylesheet" href="../assets/css/global.css">
+<link rel="stylesheet" href="../assets/css/Basicos.css">
 </head>
 
 <body>
 
-    <header class="panelSuperior">
+<header class="panelSuperior">
 
-        <input type="checkbox" id="menuToggle">
+<button id = "btnMenu" class="btnMenu">☰</button>
 
-        <label for="menuToggle" class="btnMenu">☰</label>
+<nav id ="menuNavegacion" class="menuNavegacion">   
+<a href="index.html">Inicio</a>
+<a href="Sobre Nosotros.html">Sobre Nosotros</a>
+<a href="cobertura.html">Ver Zonas de Envío</a>
+<a href="Empleados.html">Para Empleados</a>
+<a href="SeparacionContacto.html">Contactanos!</a>
+</nav>
 
-        <nav class="menuNavegacion">
-            <a href="index.html">Inicio</a>
-            <a href="Sobre Nosotros.html">Sobre Nosotros</a>
-            <a href="cobertura.html">Ver Zonas de Envío</a>
-            <a href="Empleados.html">Para Empleados</a>
-            <a href="SeparacionContacto.html">Contactanos!</a>
-        </nav>
+</header>
 
-    </header>
+<form>
 
-    <form>
+<h1 id="inicio">Login de Empleados</h1>
 
-        <label>Cédula:</label><br>
+<label>Cédula:</label><br>
 
-        <input
-            type="text"
-            placeholder="Ej:1234678"
-            inputmode="numeric"
-            pattern="^[1-9][0-9]{6,7}$"
-            maxlength="8"
-            title="Debe ser mayor a 1.000.000 y no puede comenzar con 0"
-            required
-            id="CI">
+<input
+type="text"
+placeholder="Ej:1234678"
+inputmode="numeric"
+pattern="^[1-9][0-9]{6,7}$"
+maxlength="8"
+title="Debe ser mayor a 1.000.000 y no puede comenzar con 0"
+required
+id="CI">
 
-        <br>
+<br>
 
-        <label for="clave">Contraseña</label><br>
+<label for="clave">Contraseña</label><br>
 
-        <input
-            type="password"
-            placeholder="contraseña"
-            maxlength="26"
-            id="clave"
-            required>
+<input
+type="password"
+placeholder="contraseña"
+maxlength="26"
+id="clave"
+required>
 
-        <br>
+<br>
 
-        <input type="checkbox" onclick="mostrarContraseña()">
-        <span>Mostrar Contraseña</span>
+<input type="checkbox" onclick="mostrarContraseña()">
+<span>Mostrar Contraseña</span>
 
-        <br><br>
+<br><br>
 
-        <button type="button" onclick="validarLogin(event)">
-            Ingresar
-        </button>
+<button type="button" onclick="validarLogin(event)">
+Ingresar
+</button>
 
-        <br><br>
+<br><br>
 
-    </form>
+</form>
 
+<a href="#inicio" class="flechaArriba">↑</a>
+<script src="../assets/js/menujs.js"></script>
 </body>
-
 </html>

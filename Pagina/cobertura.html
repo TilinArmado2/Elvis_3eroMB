@@ -2,56 +2,54 @@
 <html>
 
 <head>
-    <title>Todo en Blanco - Cobertura local</title>
+<title>Todo en Blanco - Cobertura local</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../assets/css/formularios.css">
-    <link rel="stylesheet" href="../assets/css/Basicos.css">
-    <link rel="stylesheet" href="../assets/css/global.css">
+<link rel="stylesheet" href="../assets/css/formularios.css">
+<link rel="stylesheet" href="../assets/css/Basicos.css">
+<link rel="stylesheet" href="../assets/css/global.css">
 </head>
 
 <body>
 
-    <header class="panelSuperior">
+<header class="panelSuperior">
 
-        <input type="checkbox" id="menuToggle">
+<button id = "btnMenu" class="btnMenu">☰</button>
+<nav id ="menuNavegacion" class="menuNavegacion">
+<a href="index.html">Inicio</a>
+<a href="Sobre Nosotros.html">Sobre Nosotros</a>
+<a href="cobertura.html">Ver Zonas de Envío</a>
+<a href="Empleados.html">Para Empleados</a>
+<a href="SeparacionContacto.html">Contactanos!</a>
+</nav>
 
-        <label for="menuToggle" class="btnMenu">☰</label>
+</header>
 
-        <nav class="menuNavegacion">
-            <a href="index.html">Inicio</a>
-            <a href="Sobre Nosotros.html">Sobre Nosotros</a>
-            <a href="cobertura.html">Ver Zonas de Envío</a>
-            <a href="Empleados.html">Para Empleados</a>
-            <a href="SeparacionContacto.html">Contactanos!</a>
-        </nav>
+<section id="cobertura" style="margin-top: 50px;">
+<h2 id="inicio">Tabla de Cobertura</h2>
 
-    </header>
+<table border="1" style="width: 100%; border-collapse: collapse;">
+<tr style="background-color: #eee;">
+<th>Departamento</th>
+<th>Estado</th>
+</tr>
+<tr>
+<td>Rivera</td>
+<td>Disponible</td>
+</tr>
+<tr>
+<td>Artigas, Salto, Tacuarembó</td>
+<td>Disponible</td>
+</tr>
+<tr>
+<td>Montevideo, Canelones, Maldonado</td>
+<td>No Disponible</td>
+</tr>
+</table>
+</section>
 
-    <section id="cobertura" style="margin-top: 50px;">
-        <h2>Tabla de Cobertura</h2>
-
-        <table border="1" style="width: 100%; border-collapse: collapse;">
-            <tr style="background-color: #eee;">
-                <th>Departamento</th>
-                <th>Estado</th>
-            </tr>
-            <tr>
-                <td>Rivera</td>
-                <td>Disponible</td>
-            </tr>
-            <tr>
-                <td>Artigas, Salto, Tacuarembó</td>
-                <td>Disponible</td>
-            </tr>
-            <tr>
-                <td>Montevideo, Canelones, Maldonado</td>
-                <td>No Disponible</td>
-            </tr>
-        </table>
-    </section>
-
+<a href="#inicio" class="flechaArriba">↑</a>
+<script src="../assets/js/menujs.js"></script>
 </body>
-
 </html>
