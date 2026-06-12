@@ -33,9 +33,18 @@ formEmpleado.addEventListener("submit", function(event) {
 
     const btnModificar = document.createElement("button");
     btnModificar.textContent = "Modificar";
-    btnModificar.addEventListener("click", function() {
-const celdas = fila.children;
-});
+
+btnModificar.addEventListener("click", function() {
+    const celdas = fila.children;
+
+    document.getElementById("ciEmpleado").value = celdas[0].textContent;
+    document.getElementById("nombreEmpleado").value = celdas[1].textContent;
+    document.getElementById("apellidoEmpleado").value = celdas[2].textContent;
+    document.getElementById("cargoEmpleado").value = celdas[3].textContent;
+
+    document.querySelector(".formularioAltaUsuario").style.display = "flex";
+
+    fila.remove();
 });
 
     const btnEliminar = document.createElement("button");
