@@ -143,20 +143,33 @@ footer {
     color: #c0c0c0;
     }
     
-   
-   
-    
-    .menuNavegacion {
-position: fixed;
-display: none;
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+}
+
+.menuNavegacion {
+    display: none;
+}
+
+.menuNavegacion.activo {
+    display: flex;
+    flex-direction: row;
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        background-color: #4e5b64;
+        padding: 5px;
+}
+    .menuNavegacion a {
+        padding: 5px 8px;
+        margin: 2px;
+        font-size: 14px;
     }
 
     
-    .menuNavegacion.activo {
-display: flex;
-flex-direction: row;
-
-    }
 .flechaArriba {
     position: fixed;
     bottom: 20px;

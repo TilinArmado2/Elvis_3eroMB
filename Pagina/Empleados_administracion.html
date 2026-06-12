@@ -45,15 +45,20 @@
 <section class="formularioAltaUsuario">
 
 <form id="formEmpleado">
-<input type="number" id="ciEmpleado" placeholder="Cedula (Ej: 12345678)" min="1000000" required>
-
+<input
+    type="text"
+    id="ciEmpleado"
+    pattern="[0-9]{7,8}"
+    maxlength="8"
+    required
+    placeholder="CI">
 <input type="text" id="nombreEmpleado" placeholder="Nombre" required>
 
 <input type="text" id="apellidoEmpleado" placeholder="Apellido" required>
 
 <input type="text" id="cargoEmpleado" placeholder="Cargo" required>
 
-<button type="button" onclick="agregarEmpleado()">Agregar</button>
+<button type="submit">Guardar empleado</button>
 
 <button type="button" id="btnCerrarAltaUsuario">Cerrar</button>
 </form>
@@ -75,29 +80,7 @@
 </tr>
 </thead>
 
-<tbody>
-
-<tr>
-<td>2789342</td>
-<td>Augusto</td>
-<td>Cuello</td>
-<td>Logística</td>
-<td>
-<button class="button" onclick="prepararModificacion(this)">Modificar</button>
-<button class="button" onclick="eliminarFila(this)">Eliminar</button>
-</td>
-</tr>
-
-<tr>
-<td>4567123</td>
-<td>Julián</td>
-<td>González</td>
-<td>Administracion</td>
-<td>
-<button class="button" onclick="prepararModificacion(this)">Modificar</button>
-<button class="button" onclick="eliminarFila(this)">Eliminar</button>
-</td>
-</tr>
+<tbody id="cuerpoTablaEmpleado"> 
 
 </tbody>
 
@@ -120,5 +103,6 @@ document.getElementById("btnCerrarAltaUsuario").addEventListener("click", functi
 </script>
 
 <script src="../assets/js/menujs.js"></script>
+<script src="../assets/js/empleados.js"></script>
 </body>
 </html>

@@ -72,15 +72,17 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: stretch;
+    
 }
 
+
 form {
-    width: 40vw;
-    min-height: 45vh;
+    max-width: 600px;
+    min-height: auto;
+    width: 90%;
     margin: auto;
-    padding: 2em;
+    padding: 3em;
     box-sizing: border-box;
 }
 
@@ -89,6 +91,6 @@ p, label, input, textarea, select, button, a {
 }
 
 input {
-    width: 90%;
+    width: 100%;
     box-sizing: border-box;
 }
